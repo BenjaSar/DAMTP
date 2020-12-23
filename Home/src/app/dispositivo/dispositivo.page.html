@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Dispositivo</ion-title>
+    <ion-buttons slot = "start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="highcharts" style="width:100%; height:300px;"></div>
+    <div>
+      <p appDirectivaAtributo ><ion-button (click) = "valveUpdate()"  expand="full" shape = "round" class="ion-text-wrap" fill = "outline" (click)="cambiar()">{{mensajeButton}}</ion-button></p>
+        <br>
+    </div> 
+    <div>  
+        <p appDirectivaAtributo><ion-button routerLink ="/medicion/{{idDispositivo}}/todas" routerDirection = "forward" expand="full" shape = "round" class="ion-text-wrap" fill = "outline"> Ver todas las mediciones</ion-button> </p>
+          <br>
+    </div>        
+    <p appDirectivaAtributo><ion-button routerLink = "/riego/{{idDispositivo}}/todas" routerDirection = "forward" expand="full" shape = "round" class="ion-text-wrap" fill = "outline">Ver los logs de riego</ion-button> </p>   
+</ion-content> 

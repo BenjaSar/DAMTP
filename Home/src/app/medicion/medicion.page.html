@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mediciones de los dispositivos</ion-title>
+    <ion-buttons slot = "start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Fecha</th>
+      <th>Valor</th>
+    </tr>
+    <tr *ngFor = "let m of this.measures">
+        <td>{{m.dispositivoId}}</td> 
+        <td>{{m.fecha | date }}</td>
+        <td>{{m.valor}}</td>
+    </tr>
+  </table>
+</ion-content>

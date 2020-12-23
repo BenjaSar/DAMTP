@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="ion hydrated">
+    <ion-title class="ios title-ios hydrated">Garden Devices</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class = "ion-padding">
+  <div>
+    <ion-list>  
+      <ion-item *ngFor = "let e of this.listadoDevices" routerLink="/dispositivo/{{e.dispositivoId}}" routerDirection="root" >
+        <ion-avatar slot = "start">
+          <ion-icon size = "large" name = "thermometer"> </ion-icon>
+        </ion-avatar>
+        <h2>
+          <ion-label>{{e.nombre | uppercase}} - Id: {{e.dispositivoId }} </ion-label>
+          <h4> 
+            <ion-label>Ubicacion: {{e.ubicacion|uppercase }}</ion-label>
+          </h4>  
+        </h2>
+      </ion-item>
+    </ion-list> 
+  </div>
+</ion-content>

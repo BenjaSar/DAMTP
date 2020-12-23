@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Logs de riego</ion-title>
+    <ion-buttons slot = "start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <table>
+    <tr>
+      <th>Id Electrovalvula</th>
+      <th>Id Log</th>
+      <th>Fecha</th>
+      <th>Apertura</th>
+    </tr>
+    <tr *ngFor = "let r of this.lRiego">
+        <td>{{r.electrovalvulaId}}</td> 
+        <td>{{r.logRiegoId}}</td>
+        <td>{{r.fecha|date}}</td>
+        <td>{{r.apertura}}</td>
+    </tr>
+  </table>
+</ion-content>
